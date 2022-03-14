@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
+
+.advice{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.advice__box{
+    display: flex;
+    flex-direction: column;
+    width: 35vw;
+    height: 50vh;
+
+    background: hsl(217, 19%, 24%);
+    border-radius: 15px;
+    border: none;
+    outline: none;
+
+    align-items: center;
+    justify-content: space-around;
+    
+    
+}
+.advice__box-number{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 1rem;
+
+}
+
+.advice__box-number h2{
+  color: hsl(150, 100%, 66%);
+  font-size: 14px;
+  font-family: "Manrope";
+  letter-spacing: 2px;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+
+
+}
+
+.advice__box-content{
+  padding: 0 3rem;
+  height: 40%;
+  display: flex;
+  text-align: center;
+  vertical-align: middle;
+  
+
+}
+
+
+.advice__box-content p{
+  font-family: "Manrope";
+  font-weight: 800;
+  color: #fff;
+  font-size: 28px;
+  text-align: center;
+  vertical-align: middle;
+  
+
+}
+
+
+
+
+.advice__button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.advice__button button{
+  position: absolute;
+  border: none;
+  outline-style: none;
+  outline: none;
+  outline-width: none;
+  border-radius: 50%;
+  margin-top: 2rem;
+  
+
+  height: 64px;
+  width: 64px;
+  background-color: hsl(150, 100%, 66%);
+  transition: all 0.3s ease-out;
+}
+
+.advice__button button :hover{
+  cursor: pointer;
+  box-shadow: 0 0 30px 20px hsl(150, 100%, 66%);
+}
+
+
+
+
+
+.advice__box-line{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}

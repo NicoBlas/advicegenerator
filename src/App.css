@@ -1,0 +1,8 @@
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+  background: hsl(218, 23%, 16%);
+}
