@@ -110,3 +110,30 @@
   justify-content: space-between;
   padding-bottom: 2rem;
 }
+
+
+
+@media screen and (max-width: 550px) {
+
+  .advice__box{
+    width: 70vw;
+    height: 50vh;
+  }
+  .advice__box-content p{
+    font-size: 25px;
+
+  
+  }
+
+
+.advice__box-content {
+  padding: 0 1rem;
+
+
+}
+
+.advice__box-line{
+  padding-bottom: none;
+}
+
+}
