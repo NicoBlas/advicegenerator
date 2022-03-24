@@ -12,12 +12,13 @@ const initialQuote = {
 
 }
 
-const svgDesktop = <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
-const svgMobile = <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z"/><g transform="translate(138)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
+const svgDesktop = <svg width="444" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path fill="#4F5D74" d="M0 8h196v1H0zM248 8h196v1H248z"/><g transform="translate(212)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
+const svgMobile = <svg width="295" height="16" xmlns="http://www.w3.org/2000/svg"><g fill="none" fillRule="evenodd"><path fill="#4F5D74" d="M0 8h122v1H0zM173 8h122v1H173z"/><g transform="translate(138)" fill="#CEE3E9"><rect width="6" height="16" rx="3"/><rect x="14" width="6" height="16" rx="3"/></g></g></svg>
 
 const Advice = () => {
 
   const [quote, setQuote] = useState(initialQuote)
+  const [estado, setEstado] = useState(false)
 
   const updateQuote = () =>{
     getQuote()
@@ -26,15 +27,24 @@ const Advice = () => {
       })
   }
 
+
   useEffect(() =>{
     updateQuote();
     
   },[])
 
+  const updateEstado = () =>{
+    console.log(estado)
+    setEstado(!estado)
+  }
+
 
   return (
     <div className='advice'>
-      <div className='advice__box'>
+      <div className='advice__pageStyle'>
+        <input type="checkbox" onClick={updateEstado} name='' />
+      </div>
+      <div className='advice__box' style={{background:estado?"none":"hsl(217, 19%, 24%)"}}>
         <div className='advice__box-number'>
           <h2>ADVICE # {quote.slip.id}</h2>
         
@@ -44,8 +54,12 @@ const Advice = () => {
 
         </div>
 
-        <div className='advice__box-line'>
+        <div className='advice__box-line lineForDesktop'>
           {svgDesktop}
+        </div>
+
+        <div className='advice__box-line lineForMobile' >
+          {svgMobile}
         </div>
 
         <div className='advice__button'>
