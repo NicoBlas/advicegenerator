@@ -197,6 +197,7 @@ input:checked[type="checkbox"]:before{
   .advice__pageStyle{
     width: 100%;
     text-align: center;
+    margin: 2rem 0;
   }
 
 
