@@ -168,7 +168,7 @@ input:checked[type="checkbox"]:before{
 
   .advice__box{
     width: 85%;
-    height: 45%;
+    height: 55%;
     margin:auto;
   }
   .advice__box-content p{
